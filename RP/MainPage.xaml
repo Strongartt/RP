@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="RP.MainPage"
+             Title="Recarga de Teléfono">
+
+    <StackLayout>
+        <!-- Usuario ingresa número telefónico -->
+        <Entry x:Name="txtPhoneNumber" Placeholder="Número telefónico" />
+
+        <!-- Usuario selecciona operador telefónico -->
+        <Picker x:Name="pickerOperator" Title="Operador">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Claro</x:String>
+                    <x:String>Pillophone</x:String>
+                    <x:String>Supermaxi</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <!-- Usuario selecciona monto de recarga -->
+        <StackLayout>
+            <Label Text="Monto de recarga:" />
+            <RadioButton x:Name="radioButton3RP" Content="3" />
+            <RadioButton x:Name="radioButton5RP" Content="5" />
+            <RadioButton x:Name="radioButton10RP" Content="10" />
+        </StackLayout>
+
+        <!-- Botón para realizar la recarga -->
+        <Button Text="Recargar" Clicked="Recargar_Clicked" />
+    </StackLayout>
+</ContentPage>
+
